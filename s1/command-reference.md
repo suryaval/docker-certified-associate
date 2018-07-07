@@ -64,3 +64,7 @@ Remove all docker containers that are exited
 
 >   docker rm $(docker ps -a -q) -f
 
+Find the current logging driver
+
+>   docker info|grep 'Loggin Driver'
+
