@@ -3,7 +3,7 @@ preparation for docker-certified-associate 2018
 
 [season1](https://github.com/suryaval/docker-notes/tree/master/s1)
 
-*   Contents
+*   Domains: 1, 2 & 3
 
     *   Docker Architecture
 
