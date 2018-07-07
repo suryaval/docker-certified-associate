@@ -39,3 +39,28 @@ Run a docker container with the image built out of the Dockerfile
 Stop at a specific build stage (using Dockerfile in multi-stage-Dockerfile)
 
 >   docker build --target builder -t alexellis2/href-counter:latest
+
+List all containers
+
+>   docker container ls
+
+Run a container out of a docker image
+
+>   docker run -it <image-name> /bin/bash
+
+List all containers (exited and active)
+
+>   docker ps -a
+
+Login into a running docker container
+
+>   docker exec -it <container-name> /bin/bash
+
+List the ports used by a container
+
+>   docker port <container-name>
+
+Remove all docker containers that are exited
+
+>   docker rm $(docker ps -a -q) -f
+
