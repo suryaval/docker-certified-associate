@@ -68,3 +68,37 @@ Find the current logging driver
 
 >   docker info|grep 'Loggin Driver'
 
+## Swarm
+
+Start a single node swarm
+
+>   docker swarm init
+
+>   docker swarm init --advertise-addr=<ip>
+
+Get Join Token for manager
+
+>   docker swarm join-token manager
+
+Get Join Token for worker
+
+>   docker swarm join-token worker
+
+Rotate an existing swarm token
+
+>   docker swarm join-token manager --rotate
+
+>   docker swarm join-token worker --rotate
+
+*   Swarm locking
+    *   stops manager from automatically rejoining a swarm
+    *   this helps from rotating the keys whenever required
+    *   prevents restoring old copy of swarm
+
+        >   docker swarm update --autolock
+
+    *   The above command gives autolock key
+
+        >   docker swarm unlock
+
+    *   GIve the unlock key to unlock swarm
