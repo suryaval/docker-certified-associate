@@ -194,8 +194,13 @@ $ docker service inspect redis
 ```
 #### Convert an application deployment into a stack file using a YAML compose file with "docker stack deploy"
 
+https://github.com/suryaval/docker-notes/blob/master/s5/s5e1.md
+
 #### Manipulate a running stack of services
 
+>   Update the docker-stack.yaml and redeploy the stack. Only changed configurations will be picked up and others will be left intact.
+
+`docker stack deploy -c docker-stack.yaml`
 #### Increase # of replicas
 
 ` Usage:  docker service scale SERVICE=REPLICAS [SERVICE=REPLICAS...]`
@@ -233,7 +238,7 @@ overall progress: 10 out of 10 tasks
 7/10: running   [==================================================>]
 8/10: running   [==================================================>]
 9/10: running   [==================================================>]
-10/10: running   [==================================================>]
+10/10: running  [==================================================>]
 verify: Service converged
 
 ds2dg0m6f9mq        redis.9             redis:3.0.6         node5               Running             Running 3 minutes ago
