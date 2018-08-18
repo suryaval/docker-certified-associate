@@ -39,17 +39,44 @@ ubuntu@ip-172-31-26-145:~$ docker network inspect developer-network
     }
 ]
 ```
-#### Troubleshoot container and engine logs to understand a connectivity issue between
-containers
+#### Troubleshoot container and engine logs to understand a connectivity issue between containers
+
+`docker logs <container-id>`
+
 #### Publish a port so that an application is accessible externally
+
+`docker run -dit nginx:latest -p 80:80 --name web-server --network developer-network`
+
 #### Identify which IP and port a container is externally accessible on
+```
+$ docker port 0b34bf293d39
+80/tcp -> 0.0.0.0:80
+```
 #### Describe the different types and use cases for the built-in network drivers
-#### Understand the Container Network Model and how it interfaces with the Docker engine
-and network and IPAM drivers
+```
+bridge
+
+host
+
+overlay
+```
+#### Understand the Container Network Model and how it interfaces with the Docker engine and network and IPAM drivers
+
 #### Configure Docker to use external DNS
-#### Use Docker to load balance HTTP/HTTPs traffic to an application (Configure L7 load
-balancing with Docker EE)
-#### Understand and describe the types of traffic that flow between the Docker engine,
-registry, and UCP controllers
+
+In /etc/docker/daemon.json
+
+```
+{
+    "dns": ["10.0.0.2", "8.8.8.8"]
+}
+
+```
+#### Use Docker to load balance HTTP/HTTPs traffic to an application (Configure L7 load balancing with Docker EE)
+
+#### Understand and describe the types of traffic that flow between the Docker engine, registry, and UCP controllers
+
 #### Deploy a service on a Docker overlay network
+
 #### Describe the difference between "host" and "ingress" port publishing mode
+
