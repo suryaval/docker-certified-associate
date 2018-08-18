@@ -124,6 +124,63 @@ Backing Up DTR includes the following:
 
 NOTE: Images are not backed up as part of native DTR backup   
 
+```
+INFO[0000] Beginning Docker Trusted Registry installation
+ucp-password:
+INFO[0004] Validating UCP cert
+INFO[0004] Connecting to UCP
+INFO[0005] health checking ucp
+INFO[0005] Only one available UCP node detected. Picking UCP node 'ip-172-31-19-240'
+INFO[0005] Searching containers in UCP for DTR replicas
+INFO[0005] Searching containers in UCP for DTR replicas
+INFO[0005] verifying [80 443] ports on ip-172-31-19-240
+INFO[0010] Waiting for running dtr-phase2 container to finish
+INFO[0010] starting phase 2
+INFO[0000] Validating UCP cert
+INFO[0000] Connecting to UCP
+INFO[0000] health checking ucp
+INFO[0000] Verifying your system is compatible with DTR
+INFO[0000] Checking if the node is okay to install on
+INFO[0000] Creating network: dtr-ol
+INFO[0000] Connecting to network: dtr-ol
+INFO[0000] Waiting for phase2 container to be known to the Docker daemon
+INFO[0001] Setting up replica volumes...
+INFO[0001] Creating initial CA certificates
+INFO[0001] Bootstrapping rethink...
+INFO[0001] Creating dtr-rethinkdb-5fc87377909f...
+INFO[0009] Establishing connection with Rethinkdb
+INFO[0010] Waiting for database dtr2 to exist
+INFO[0010] Establishing connection with Rethinkdb
+INFO[0010] Generated TLS certificate.                    dnsNames=[*.com *.*.com example.com *.dtr *.*.dtr] domains=[*.com *.*.com 172.17.0.1 example.com *.dtr *.*.dtr] ipAddresses=[172.17.0.1]
+INFO[0011] License config copied from UCP.
+INFO[0011] Migrating db...
+INFO[0000] Establishing connection with Rethinkdb
+INFO[0000] Migrating database schema                     fromVersion=0 toVersion=9
+INFO[0006] Waiting for database notaryserver to exist
+INFO[0007] Waiting for database notarysigner to exist
+INFO[0007] Waiting for database jobrunner to exist
+INFO[0009] Migrated database from version 0 to 9
+INFO[0020] Starting all containers...
+INFO[0020] Getting container configuration and starting containers...
+INFO[0021] Recreating dtr-rethinkdb-5fc87377909f...
+INFO[0025] Creating dtr-registry-5fc87377909f...
+INFO[0030] Creating dtr-garant-5fc87377909f...
+INFO[0035] Creating dtr-api-5fc87377909f...
+INFO[0049] Creating dtr-notary-server-5fc87377909f...
+INFO[0055] Recreating dtr-nginx-5fc87377909f...
+INFO[0060] Creating dtr-jobrunner-5fc87377909f...
+INFO[0078] Creating dtr-notary-signer-5fc87377909f...
+INFO[0083] Creating dtr-scanningstore-5fc87377909f...
+INFO[0088] Trying to get the kv store connection back after reconfigure
+INFO[0088] Establishing connection with Rethinkdb
+INFO[0089] Verifying auth settings...
+INFO[0089] Successfully registered dtr with UCP
+INFO[0089] Establishing connection with Rethinkdb
+INFO[0089] Background tag migration started
+INFO[0089] Installation is complete
+INFO[0089] Replica ID is set to: 5fc87377909f
+INFO[0089] You can use flag '--existing-replica-id 5fc87377909f' when joining other replicas to your Docker Trusted Registry Cluster
+```
 #### Configure the Docker daemon to start on boot
 
 >   sudo systemctl enable docker
