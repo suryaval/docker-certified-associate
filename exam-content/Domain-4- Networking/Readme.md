@@ -137,4 +137,37 @@ ekg72q2ncvop        ingress             overlay             swarm
 cun9u3fzvyna        overlay0            overlay             swarm
 ```
 #### Describe the difference between "host" and "ingress" port publishing mode
+```
+In host network's port publishing mode, you are responsible for knowing where all instances are at all times, controlled with 'mode=host' in deployment
 
+In ingress port publishing mode, it makes all published ports available on all hosts(nodes & workers)
+```
+* Network Driver Types:
+    *   Bridge
+    *   None
+    *   Host
+    *   Overlay
+    *   Ingress
+    *   Docker Gateway Bridge
+    
+* Bridge Network:
+    *   default networkon stand-alone Docker hosts
+    *   all containers on a host using bridge network can communicate
+    
+* None Network:
+    *  Containers using this network will not get networking access at all
+    
+* Host Network:
+    *   access container ports only from host system
+    
+* Overlay Network:
+    *   Swarm scoped network
+    *   Network will be available in the swarm enabled hosts
+    
+* Ingress Network:
+    * network that load balances traffic between working nodes
+    * maintains list of node-ips that are running a service and when request(to access a service) comes in, routes to one of them
+    * provides routing mesh that allows services to be exposed externally
+    
+* Docker Gateway Bridge:
+    * special bridge network that allows other networks access a docker daemon's physical network
