@@ -77,6 +77,64 @@ In /etc/docker/daemon.json
 #### Understand and describe the types of traffic that flow between the Docker engine, registry, and UCP controllers
 
 #### Deploy a service on a Docker overlay network
-
+```
+ubuntu@ip-172-31-26-145:~$ docker network create --driver=overlay --subnet=172.19.0.0/24 overlay0
+cun9u3fzvyna249t275s1vq6d
+ubuntu@ip-172-31-26-145:~$ docker network ls
+NETWORK ID          NAME                DRIVER              SCOPE
+b6abb703fdb8        bridge              bridge              local
+fb23f1b5bdc2        developer-network   bridge              local
+06817a5e8a4a        docker_gwbridge     bridge              local
+i9jcecb2s5rx        dtr-ol              overlay             swarm
+0056c79bddd6        host                host                local
+ekg72q2ncvop        ingress             overlay             swarm
+36d00ac0ebb7        none                null                local
+cun9u3fzvyna        overlay0            overlay             swarm
+ubuntu@ip-172-31-26-145:~$ docker network inspect overlay0
+[
+    {
+        "Name": "overlay0",
+        "Id": "cun9u3fzvyna249t275s1vq6d",
+        "Created": "2018-08-23T22:49:39.346265236Z",
+        "Scope": "swarm",
+        "Driver": "overlay",
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": null,
+            "Config": [
+                {
+                    "Subnet": "172.19.0.0/24",
+                    "Gateway": "172.19.0.1"
+                }
+            ]
+        },
+        "Internal": false,
+        "Attachable": false,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Containers": null,
+        "Options": {
+            "com.docker.network.driver.overlay.vxlanid_list": "4098"
+        },
+        "Labels": null
+    }
+]
+```
+>   when a service is deployed on a overlay network, worker nodes also will get the network. FOllowing excerpt shows that overlay0 is available on worker node even though it is created on a master node. Since it is a swarm scoped network
+```
+ubuntu@ip-172-31-19-240:~$ docker network ls
+NETWORK ID          NAME                DRIVER              SCOPE
+beaa33ab0b81        bridge              bridge              local
+a6b219d1e025        docker_gwbridge     bridge              local
+i9jcecb2s5rx        dtr-ol              overlay             swarm
+6b39102a6f6a        host                host                local
+ekg72q2ncvop        ingress             overlay             swarm
+8ff5e8691eca        none                null                local
+cun9u3fzvyna        overlay0            overlay             swarm
+```
 #### Describe the difference between "host" and "ingress" port publishing mode
 
