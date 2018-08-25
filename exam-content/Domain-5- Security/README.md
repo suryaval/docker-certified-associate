@@ -38,6 +38,10 @@ Add LDAP configuration details
 `Download the client bundles from my-profile -> client bundles
 store the location of certs to an environment variable so that docker daemon will identify it.
 Based on the role for the user, the docker daemon will assume the capabilities for the user using client bundles`
+Client bundles contain the following:
+* Account Security Key
+* Environment variables
+* UCP certificate files
 
 #### Describe default engine security
 
