@@ -5,27 +5,27 @@ Reference material for official docker certification - docker certified associat
 
 # Exam Concepts
 
-  ## Section-1: Orchestration
+## Section-1: Orchestration
   
   * [Orchestration - Concepts](https://github.com/suryaval/docker-certified-associate/tree/master/exam-content/Domain-1%20-%20Orchestration)
   
-  ## Section-2: Image Management
+## Section-2: Image Management
 
   * [Image Management - Concepts](https://github.com/suryaval/docker-certified-associate/tree/master/exam-content/Domain-2%20-%20Image%20Management)
 
-  ## Section-3: Installation & Configuration
+## Section-3: Installation & Configuration
 
   * [Installation & Configuration - Concepts](https://github.com/suryaval/docker-certified-associate/tree/master/exam-content/Domain-3%20-%20InstallationConfiguration)
 
-  ## Section-4: Networking
+## Section-4: Networking
   
   * [Networking - Concepts](https://github.com/suryaval/docker-certified-associate/tree/master/exam-content/Domain-4-%20Networking)
   
-  ## Section-5: Security
+## Section-5: Security
 
   * [Security - Concepts](https://github.com/suryaval/docker-certified-associate/tree/master/exam-content/Domain-5-%20Security)
   
-  ## Section-6: Volumes
+## Section-6: Volumes
   
   * [Volumes - Concepts](https://github.com/suryaval/docker-certified-associate/tree/master/exam-content/Domain-6-%20Volumes)
   
