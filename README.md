@@ -33,6 +33,12 @@ Reference material for official docker certification - docker certified associat
 ### Section-6: Volumes
   
   * [Volumes - Concepts](https://github.com/suryaval/docker-certified-associate/tree/master/exam-content/Domain-6-%20Volumes)
+
+## Certification Preparation Material
+
+  * [Nigel Poulton's Docker Deep Dive - PaperBack](https://www.amazon.com/Docker-Deep-Dive-Nigel-Poulton-ebook/dp/B01LXWQUFF)
+  * [Nigel Poulton's Docker Deep Dive - PluralSight](https://app.pluralsight.com/library/courses/docker-deep-dive/table-of-contents)
+  * [Terry Cox's Docker Certified Associate prep Course - LinuxAcademy](https://linuxacademy.com/linux/training/course/name/docker-certified-associate-prep-course)
   
 ## Free Docker Practice Environment
 
