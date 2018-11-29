@@ -29,6 +29,7 @@ Reference material for official docker certification - docker certified associat
 ### Section-5: Security
 
   * [Security - Concepts](https://github.com/suryaval/docker-certified-associate/tree/master/exam-content/Domain-5-%20Security)
+  * [Docker Secrets](https://github.com/suryaval/docker-certified-associate/blob/master/s4/s4e2.md)
   
 ### Section-6: Volumes
   
