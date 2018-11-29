@@ -1,5 +1,5 @@
 # Docker Certified Associate
-Reference material for official docker certification - docker certified associate 2018
+Reference material for the first & only Official Docker certification launched at DockerCon EU'2017
 
 [](https://github.com/suryaval/docker-notes/blob/master/images/dca.jpeg "Docker Certified Associate")
 
