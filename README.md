@@ -57,3 +57,6 @@ Reference material for the first & only Official Docker certification launched a
   
   * [djitz.com](https://djitz.com/certification/docker-certified-associate-dca-test-review-questions-set-9-security/)
   
+## Issues & Change Requests
+
+If you find any issues or corrections to be made to the content, feel free to raise a Pull Request [here](https://github.com/suryaval/docker-certified-associate/issues/new/choose)
