@@ -14,6 +14,8 @@ Reference material for the first & only Official Docker certification launched a
   
   * [Orchestration - Concepts](https://github.com/suryaval/docker-certified-associate/tree/master/exam-content/Domain-1%20-%20Orchestration)
   
+  * [Knowledge Check](https://github.com/suryaval/docker-certified-associate/wiki/Orchestration)
+  
 ### Section-2: Image Management
 
   * [Image Management - Concepts](https://github.com/suryaval/docker-certified-associate/tree/master/exam-content/Domain-2%20-%20Image%20Management)
