@@ -19,6 +19,8 @@ Reference material for the first & only Official Docker certification launched a
 ### Section-2: Image Management
 
   * [Image Management - Concepts](https://github.com/suryaval/docker-certified-associate/tree/master/exam-content/Domain-2%20-%20Image%20Management)
+  
+  * [Knowledge Check](https://github.com/suryaval/docker-certified-associate/wiki/Image-Creation,-Management-&-Registry)
 
 ### Section-3: Installation & Configuration
 
