@@ -25,6 +25,8 @@ Reference material for the first & only Official Docker certification launched a
 ### Section-3: Installation & Configuration
 
   * [Installation & Configuration - Concepts](https://github.com/suryaval/docker-certified-associate/tree/master/exam-content/Domain-3%20-%20InstallationConfiguration)
+  
+  * [Knowledge Check](https://github.com/suryaval/docker-certified-associate/wiki/Installation-&-Configuration)
 
 ### Section-4: Networking
   
