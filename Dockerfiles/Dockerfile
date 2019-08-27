@@ -1,7 +1,7 @@
 FROM ubuntu:latest as builder
 WORKDIR /root/
 RUN apt update -y
-CMD [ "ls","-ltr","&&","touch","something.py" ]
+COPY ./something.py WORKDIR
 
 FROM alpine:latest
 WORKDIR /root/
