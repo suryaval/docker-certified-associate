@@ -5,5 +5,5 @@ CMD [ "ls","-ltr","&&","touch","something.py" ]
 
 FROM ubuntu:busybox
 WORKDIR /root/
-COPY --from=builder /root/something.py
+COPY --from=builder /root/something.py WORKDIR
 CMD [ "ls","-ltr" ]
