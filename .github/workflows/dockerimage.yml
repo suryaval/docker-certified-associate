@@ -1,7 +1,9 @@
 name: Docker Image CI
 
 on:
-- pull_request: *
+- pull_request:
+  paths:
+    - '*'
 - push:
     branches:
     - master
