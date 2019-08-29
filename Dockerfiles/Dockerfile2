@@ -1,0 +1,5 @@
+FROM alpine:latest
+WORKDIR /root/
+RUN apk install python -y
+ADD something.py /root/
+ENTRYPOINT python something.py
