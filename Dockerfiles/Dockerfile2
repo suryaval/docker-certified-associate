@@ -1,5 +1,11 @@
 FROM alpine:latest
 WORKDIR /root/
-RUN apk install python -y
+RUN apk add --update \
+    python \
+    python-dev \
+    py-pip \
+    build-base \
+  && pip install virtualenv \
+  && rm -rf /var/cache/apk/*
 ADD something.py /root/
 ENTRYPOINT python something.py
