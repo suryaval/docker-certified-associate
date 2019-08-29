@@ -14,8 +14,15 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Build the Docker image
-      run: docker build . --file Dockerfiles/Dockerfile --tag suryaval/dca:example
+      run: docker build . --file Dockerfiles/Dockerfile --tag surval/docker-certified-associate:example-1
     - name: List Docker Images
       run: docker images
     - name: Unit Tests - Run the docker image
-      run: docker run suryaval/dca:example
+      run: docker run surval/docker-certified-associate:example-1
+    - name: Login to DockerHub
+      env:
+       DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+       DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+      run: echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+    - name: Push to DockerHub
+      run: docker push surval/docker-certified-associate:example-1
