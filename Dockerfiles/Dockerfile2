@@ -1,5 +1,6 @@
 FROM alpine:latest
 MAINTAINER surya-vallabhaneni
+EXPOSE 80
 WORKDIR /root/
 RUN apk add --update \
     python \
