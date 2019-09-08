@@ -32,6 +32,8 @@ Reference material for the first & only Official Docker certification launched a
   
   * [Networking - Concepts](https://github.com/suryaval/docker-certified-associate/tree/master/exam-content/Domain-4-%20Networking)
   
+  * [Knowledge Check](https://github.com/suryaval/docker-certified-associate/wiki/Networking)
+  
 ### Section-5: Security
 
   * [Security - Concepts](https://github.com/suryaval/docker-certified-associate/tree/master/exam-content/Domain-5-%20Security)
