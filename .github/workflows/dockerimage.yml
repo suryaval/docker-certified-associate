@@ -25,4 +25,4 @@ jobs:
        DOCKER_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
       run: echo "$DOCKER_PASSWORD" | docker login --username "$DOCKER_USERNAME" --password-stdin
     - name: Push to DockerHub
-      run: docker push surval/docker-certified-associate:example-1
+      run: docker push surval/docker-certified-associate:example-2
