@@ -38,6 +38,7 @@ Reference material for the first & only Official Docker certification launched a
 
   * [Security - Concepts](https://github.com/suryaval/docker-certified-associate/tree/master/exam-content/Domain-5-%20Security)
   * [Docker - Secrets](https://github.com/suryaval/docker-certified-associate/blob/master/s4/s4e2.md)
+  * [Knowledge Check](https://github.com/suryaval/docker-certified-associate/wiki/Security)
   
 ### Section-6: Volumes
   
