@@ -17,6 +17,8 @@ jobs:
       run: docker build . --file Dockerfiles/Dockerfile --tag surval/docker-certified-associate:example-2
     - name: List Docker Images
       run: docker images
+    - name: Print env Vars
+      run: env
     - name: Unit Tests - Run the docker image
       run: docker run surval/docker-certified-associate:example-2
     - name: Login to DockerHub
