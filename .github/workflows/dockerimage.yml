@@ -15,11 +15,13 @@ jobs:
     - uses: actions/checkout@v1
     - name: Build the Docker image
       run: docker build . --file Dockerfiles/Dockerfile --tag surval/docker-certified-associate:example-2
+    - name: Build the Dockerfile3
+      run: docker build . --file Dockerfiles/Dockerfile3 --tag surval/docker-certified-associate:list-repos
     - name: List Docker Images
       run: docker images
     - name: Print env Vars
       run: env
-    - name: Unit Tests - Run the docker image
+    - name: Unit Tests - Run the docker image-1
       run: docker run surval/docker-certified-associate:example-2
     - name: Login to DockerHub
       env:
