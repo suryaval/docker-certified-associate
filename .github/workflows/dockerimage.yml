@@ -21,12 +21,16 @@ jobs:
       run: docker images
     - name: Print env Vars
       run: env
-    - name: Unit Tests - Run the docker image-1
+    - name: Unit Tests 1 - Run the docker image-1
       run: docker run surval/docker-certified-associate:example-2
+    - name: Unit Test 2 - Run the docker image - list-repos
+      run: docker run surval/docker-certified-associate:list-repos
     - name: Login to DockerHub
       env:
        DOCKER_PASSWORD: ${{ secrets.DOCKERHUB_PASSWORD }}
        DOCKER_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
       run: echo "$DOCKER_PASSWORD" | docker login --username "$DOCKER_USERNAME" --password-stdin
     - name: Push to DockerHub
-      run: docker push surval/docker-certified-associate:example-2
+      run: |
+        docker push surval/docker-certified-associate:example-2
+        docker push surval/docker-certified-associate:list-repos
