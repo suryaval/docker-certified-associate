@@ -1,0 +1,6 @@
+FROM ubuntu:latest
+WORKDIR /
+RUN apt update -y && \
+    apt install python python-pip -y
+COPY anything.py /
+ENTRYPOINT python anything.py
