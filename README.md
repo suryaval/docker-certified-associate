@@ -43,6 +43,8 @@ Reference material for the first & only Official Docker certification launched a
 ### Section-6: Volumes
   
   * [Volumes - Concepts](https://github.com/suryaval/docker-certified-associate/tree/master/exam-content/Domain-6-%20Volumes)
+  
+  * [Knowledge Check](https://github.com/suryaval/docker-certified-associate/wiki/Storage-&-Volumes)
 
 ## Certification Preparation Material
 
