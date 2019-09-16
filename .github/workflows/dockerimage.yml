@@ -12,10 +12,6 @@ jobs:
       run: docker build . --file Dockerfiles/Dockerfile --tag surval/docker-certified-associate:example-2
     - name: Build the Docker image - Dockerfile3
       run: docker build . --file Dockerfiles/Dockerfile3 --tag surval/docker-certified-associate:list-repos
-  test:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v1 
     - name: List Docker Images
       run: docker images
     - name: Print env Vars
@@ -24,10 +20,6 @@ jobs:
       run: docker run surval/docker-certified-associate:example-2
     - name: Unit Test 2 - Run the docker image
       run: docker run surval/docker-certified-associate:list-repos
-  deploy:
-    runs-on: ubuntu-latest
-    steps: 
-    - uses: actions/checkout@v1 
     - name: Login to DockerHub
       env:
        DOCKER_PASSWORD: ${{ secrets.DOCKERHUB_PASSWORD }}
