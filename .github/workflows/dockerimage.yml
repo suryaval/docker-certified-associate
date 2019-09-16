@@ -8,23 +8,28 @@ on:
 jobs:
 
   build:
- 
     runs-on: ubuntu-latest
- 
     steps:
     - uses: actions/checkout@v1
-    - name: Build the Docker image
+    - name: Build the Docker image - Dockerfile
       run: docker build . --file Dockerfiles/Dockerfile --tag surval/docker-certified-associate:example-2
-    - name: Build the Dockerfile3
+    - name: Build the Docker image - Dockerfile3
       run: docker build . --file Dockerfiles/Dockerfile3 --tag surval/docker-certified-associate:list-repos
+  test:
+    runs-on: ubuntu-latest
+    steps: actions/checkout@v1
+    -uses: 
     - name: List Docker Images
       run: docker images
     - name: Print env Vars
       run: env
-    - name: Unit Tests 1 - Run the docker image-1
+    - name: Unit Tests 1 - Run the docker image
       run: docker run surval/docker-certified-associate:example-2
-    - name: Unit Test 2 - Run the docker image - list-repos
+    - name: Unit Test 2 - Run the docker image
       run: docker run surval/docker-certified-associate:list-repos
+  deploy:
+    runs-on: ubuntu-latest
+    steps: actions/checkout@v1  
     - name: Login to DockerHub
       env:
        DOCKER_PASSWORD: ${{ secrets.DOCKERHUB_PASSWORD }}
