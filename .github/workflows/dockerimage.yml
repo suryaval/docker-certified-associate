@@ -29,3 +29,12 @@ jobs:
       run: |
         docker push surval/docker-certified-associate:example-2
         docker push surval/docker-certified-associate:list-repos
+    - name: Login to GitHub Package Registry
+      env:
+        GITHUB_PACKAGE_REGISTRY_USERNAME: ${{ secrets.GITHUB_PACKAGE_REGISTRY_USERNAME }}
+        GITHUB_PACKAGE_REGISTRY_PASSWORD: ${{ secrets.GITHUB_PACKAGE_REGISTRY_TOKEN }}
+      run: echo "GITHUB_PACKAGE_REGISTRY_TOKEN" |docker login docker.pkg.github.com --username "$GITHUB_PACKAGE_REGISTRY_USERNAME" --password-stdin
+    - name: Push to GitHub Package Registry
+      run: |
+        docker tag surval/docker-certified-associate:example-2 docker.pkg.github.com/suryaval/docker-certified-associate/example-2:1.0.0
+        docker push docker.pkg.github.com/suryaval/docker-certified-associate/example-2:1.0.0
