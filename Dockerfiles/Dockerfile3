@@ -1,7 +1,7 @@
 FROM ubuntu:latest
 WORKDIR /
 RUN apt update -y && \
-    apt install python python-pip -y
+    apt install python3 python3-pip -y
 COPY anything.py /
 RUN pip install requests pyyaml
-ENTRYPOINT python anything.py
+ENTRYPOINT python3 anything.py
